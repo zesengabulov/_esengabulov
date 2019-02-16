@@ -10,10 +10,18 @@ namespace task2week2
     {
         static void Main(string[] args)
         {
-            Student A = new Student("Zhandos", "18BD110271"); // Student A's name is Nursultan with 18BD110409 id 
+            Student A = new Student("Zhandos", "18BD110271"); // Student A's name is Zhandos with 18BD110271 id 
             Console.WriteLine(A.getname() ); // shows student A's name via getname function
             Console.WriteLine(A.getid());//shows student A's id via getid function
+            Console.WriteLine(A.getyear());
             Console.ReadKey(); // pauses the execution of the program
+
+            A.incrementOfYear();
+
+            Console.WriteLine(A.getname());
+            Console.WriteLine(A.getid());
+            Console.WriteLine(A.getyear());
+
         }
     }
     public class Student //creating a new public class called Student
@@ -34,6 +42,10 @@ namespace task2week2
         public String getid()//function getid returns  this id which is in contructor Student
         {
             return this.id;
+        }
+        public int getyear()//function getid returns  this id which is in contructor Student
+        {
+            return this.yearOfStudy;
         }
         public void setname()//function setname changes this name to the new name 
         {

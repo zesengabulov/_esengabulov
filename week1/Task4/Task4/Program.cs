@@ -4,23 +4,23 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Task4
+namespace Task_4
 {
     class Program
     {
         static void Main(string[] args)
         {
-            string s = Console.ReadLine(); // Read the lenght of the square from Console
-            int n = int.Parse(s); // convert s into int type number
+            int n = int.Parse(Console.ReadLine());
+            int[,] a = new int[n, n];
             for (int i = 0; i < n; i++)
             {
-                for (int j = 0; j <= i; j++)   //where j <= i put the symbol
+                for (int j = 0; j <= i; j++)
                 {
-                    Console.Write("[*]"); // the symbol [*]
+                    Console.Write("[*]");
                 }
-                Console.WriteLine(); // Go to the next row
+                Console.WriteLine();
             }
-            Console.ReadKey();
+            Console.ReadLine();
         }
     }
 }
